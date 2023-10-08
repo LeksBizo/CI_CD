@@ -17,5 +17,17 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test //Новый тест (мой)
+    void findMaxMid() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 5, 8, 4, 50, 3, 8, 6, 11, 11, 12}; //изменение 5го числа на 50
+        long expected = 50; //замена 5 на 50
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
 
